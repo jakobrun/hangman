@@ -3,4 +3,6 @@ var express = require('express'),
 
 app.use(express.static('client'));
 
-app.listen(process.env.PORT || 3000);
+var port = process.env.PORT || 3000
+console.log('listen on port', port);
+app.listen(prot);

@@ -2,10 +2,8 @@
   "name": "Hangman",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-      "start": "node server/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js"
   },
   "author": "",
   "license": "ISC",
