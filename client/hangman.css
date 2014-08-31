@@ -1,0 +1,70 @@
+body{
+    margin: 15px 20px;
+    font-size: 20px;
+    background-color: #333;
+    color: #777;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALUlEQVQYV2N0t3P//+j5IwY5STkGfDSjga7B/58/fjKwc7Az4KMZR02kSjgCACY3pKdG/l4ZAAAAAElFTkSuQmCC) repeat;
+        
+}
+.maskedword{
+    letter-spacing: 6px;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    padding: 6px 10px
+}
+
+.keys span{
+    display: inline-block;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.guessed{
+    text-decoration: line-through;
+    color: #555;
+}
+
+.stroke{
+    fill: transparent;
+    stroke: #999;
+    stroke-width: 4;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+}
+.draw{
+    animation: dash 1s linear forwards;
+    -webkit-animation: dash 1s linear forwards;
+}
+
+.glass{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    opacity: 0.9;
+    transform: translateY(-100%);
+    transition: transform 1s;
+}
+.glass-show{
+    transform: translateY(0);
+}
+.popup-content{
+    margin: 40px auto;
+    width: 280px;
+    background: #555;
+    padding: 20px;
+    box-shadow: 3px 3px 5px 6px #222;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="hangman.css" type="text/css"/>
+</head>
+<body>
+    <div id="gmamebox">
+        <svg width="200" height="200" id="hangman">
+            <rect width="170" height="30" y="170" class="stroke"></rect>
+            <line x1="30" x2="30" y1="20" y2="170" class="stroke"></line>
+            <line x1="30" x2="100" y1="22" y2="22" class="stroke"></line>
+            <line x1="30" x2="60" y1="52" y2="22" class="stroke"></line>
+            <line x1="98" x2="98" y1="22" y2="50" class="stroke"></line>
+            <circle cx="98" cy="65" r="15" class="stroke"></circle>
+            <line x1="98" x2="98" y1="80" y2="120" class="stroke"></line>
+            <line x1="98" x2="84" y1="87" y2="115" class="stroke"></line>
+            <line x1="98" x2="112" y1="87" y2="115" class="stroke"></line>
+            <line x1="98" x2="88" y1="120" y2="150" class="stroke"></line>
+            <line x1="98" x2="108" y1="120" y2="150" class="stroke"></line>
+        </svg>
+        <div id="maskedword" class="maskedword">
+            
+        </div>
+        <div id="keys" class="keys">
+            <span>A</span>
+            <span>Á</span>
+            <span>B</span>
+            <span>D</span>
+            <span>Ð</span>
+            <span>E</span>
+            <span>É</span>
+            <span>F</span>
+            <span>G</span><br>
+            <span>H</span>
+            <span>I</span>
+            <span>Í</span>
+            <span>J</span>
+            <span>K</span>
+            <span>L</span>
+            <span>M</span>
+            <span>N</span>
+            <span>O</span><br>
+            <span>Ó</span>
+            <span>P</span>
+            <span>Q</span>
+            <span>R</span>
+            <span>S</span>
+            <span>T</span>
+            <span>U</span>
+            <span>Ú</span>
+            <span>V</span><br>
+            <span>W</span>
+            <span>X</span>
+            <span>Y</span>
+            <span>Ý</span>
+            <span>Þ</span>
+            <span>Æ</span>
+            <span>Ö</span>
+        </div>
+    </div>
+    <div id="popup" class="glass">
+        <div class="popup-content">
+            <h2 id="popup-text">Game over!!!</h2>
+            <button id="aftur">
+                Aftur
+            </button>
+        </div>
+    </div>
+    <script src="hangman.js"></script>
+    <script src="hangman-ctrl.js"></script>
+    <script type='text/javascript'>//<![CDATA[                                              
+document.write("<script async src='//HOST:3000/browser-sync-client.1.3.5.js'><\/script>"
+.replace(/HOST/g, location.hostname));                                                  
+//]]></script>
+</body>
+</html>
