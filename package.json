@@ -1,12 +1,12 @@
 {
   "name": "Hangman",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "scripts": {
     "start": "node server/index.js"
   },
   "engines": {
-    "node": ">= 0.10.25"
+    "node": "0.10.x"
   },
   "author": "",
   "license": "ISC",
