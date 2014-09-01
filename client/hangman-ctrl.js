@@ -1,5 +1,24 @@
 
-var words = ['friður', 'rúsina', 'krúttsprengja', 'dúlla', 'mega', 'typpi', 'pipp', 'hrútur', 'gandalfur', 'fróði', 'sletta'];//prompt('Veldu orð:');
+var words = ['friður',
+'rúsína',
+'krúttsprengja',
+'dúlla',
+'mega',
+'typpi',
+'pipp',
+'bakarí',
+'hrútur',
+'gandálfur',
+'drakúla'
+'fróði',
+'eldgos',
+'bárðabunga',
+'eyjafjallajökull',
+'þórsmörk',
+'dagmamma',
+'prinsessa',
+'æðislegt',
+'sletta'];
 
 var maskedWordView = document.getElementById('maskedword');
 var keys = document.querySelectorAll('.keys span');
