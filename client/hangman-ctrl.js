@@ -9,7 +9,7 @@ var words = ['friður',
 'bakarí',
 'hrútur',
 'gandálfur',
-'drakúla'
+'drakúla',
 'fróði',
 'eldgos',
 'bárðabunga',
