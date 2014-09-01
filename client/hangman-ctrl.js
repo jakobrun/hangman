@@ -6,6 +6,7 @@ var words = ['friður',
 'mega',
 'typpi',
 'pipp',
+'ástarpungur',
 'bakarí',
 'hrútur',
 'gandálfur',
@@ -33,7 +34,8 @@ function renderView(){
 }
 
 function createGame(){
-    return hangman(words[Math.floor(Math.random()*words.length)]);
+    var index = Math.floor(Math.random()*words.length);
+    return hangman(words.splice(index, 1)[0]);
 }
 var game = createGame();
 
@@ -41,14 +43,13 @@ renderView();
 
 var onKeyClick = function (e){
     var character = e.target.textContent;
-    console.log(character);
     e.target.className += ' guessed';
     if(!game.guess(character)){
         childNodes[i].setAttribute('class', 'draw ' + childNodes[i].getAttribute('class'));
         i++;
     }
     if(game.isGameOver()){
-        popupText.textContent = game.isWinner()?'Til hamingju, þú vannst!!!': 'Því miður, þú ert dauður :(. Orðið er ' + game.word();
+        popupText.textContent = game.isWinner()?'Til hamingju, þú vannst!!!': 'Því miður, þú ert dauður :( Orðið er ' + game.word();
         popup.className += ' glass-show';
     }
     renderView();
@@ -67,6 +68,10 @@ aftur.addEventListener('click', function(){
     for(var j=0;j<keys.length;j++) {
         keys[j].className = '';
     }
-    game = createGame();
-    renderView();
+    if(words.length) {
+        game = createGame();
+        renderView();
+    } else {
+        alert('Ekki með fleiri orð í bili.');
+    }
 })
