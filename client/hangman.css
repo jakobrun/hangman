@@ -6,6 +6,23 @@ body{
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALUlEQVQYV2N0t3P//+j5IwY5STkGfDSjga7B/58/fjKwc7Az4KMZR02kSjgCACY3pKdG/l4ZAAAAAElFTkSuQmCC) repeat;
         
 }
+button{
+    background-color: #888;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 10px 15px;
+    box-shadow: 0 0 8px #222 inset;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.buttonbar{
+    text-align: center;
+}
+.main{
+    margin: 0 auto;
+    width: 300px;
+}
 .maskedword{
     letter-spacing: 6px;
     font-size: 1.8rem;
@@ -42,8 +59,7 @@ body{
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #333;
-    opacity: 0.9;
+    background-color: rgba(33,33,33,0.5);
     transform: translateY(-100%);
     transition: transform 1s;
 }
@@ -51,7 +67,7 @@ body{
     transform: translateY(0);
 }
 .popup-content{
-    margin: 40px auto;
+    margin: 280px auto;
     width: 280px;
     background: #555;
     padding: 20px;

@@ -7,6 +7,35 @@ var words = ['friður',
 'typpi',
 'pipp',
 'ástarpungur',
+'íkorni',
+'refur',
+'flóðhestur',
+'þoka',
+'rigning',
+'sólskin',
+'malbik',
+'birki',
+'handrið',
+'klukka',
+'motta',
+'ruggustóll',
+'sallatbar',
+'fundur',
+'inniskór',
+'jólasveinn',
+'buxur',
+'skósveinn',
+'víkingur',
+'sófasett',
+'rafmagnsgítar',
+'spaung',
+'hreindýr',
+'skemmtilegt',
+'saltstöng',
+'bókaormur',
+'kúrbítur',
+'slátur',
+'kjötsúpa',
 'bakarí',
 'hrútur',
 'gandálfur',
@@ -21,13 +50,14 @@ var words = ['friður',
 'æðislegt',
 'sletta'];
 
-var maskedWordView = document.getElementById('maskedword');
-var keys = document.querySelectorAll('.keys span');
-var childNodes = document.querySelectorAll('#hangman .stroke');
-var popup = document.getElementById('popup');
-var popupText = document.getElementById('popup-text');
-var aftur = document.getElementById('aftur');
-var i = 0;
+var maskedWordView = document.getElementById('maskedword'),
+    keys = document.querySelectorAll('.keys span'),
+    childNodes = document.querySelectorAll('#hangman .stroke'),
+    popup = document.getElementById('popup'),
+    popupText = document.getElementById('popup-text'),
+    message = document.getElementById('message'),
+    aftur = document.getElementById('aftur'),
+    i = 0;
 
 function renderView(){
 	maskedWordView.textContent = game.maskedValue();
@@ -49,7 +79,8 @@ var onKeyClick = function (e){
         i++;
     }
     if(game.isGameOver()){
-        popupText.textContent = game.isWinner()?'Til hamingju, þú vannst!!!': 'Því miður, þú ert dauður :( Orðið er ' + game.word();
+        popupText.textContent = game.isWinner()?'Jeeeei... vel gert!!!': 'Úbs... dauður :(';
+            message.textContent = game.isWinner()?'': 'Orðið er: ' + game.word();
         popup.className += ' glass-show';
     }
     renderView();
