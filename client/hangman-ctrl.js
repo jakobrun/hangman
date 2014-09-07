@@ -1,4 +1,4 @@
-
+'use strict';
 var words = ['friður',
 'rúsína',
 'krúttsprengja',
@@ -57,7 +57,8 @@ var maskedWordView = document.getElementById('maskedword'),
     popupText = document.getElementById('popup-text'),
     message = document.getElementById('message'),
     aftur = document.getElementById('aftur'),
-    i = 0;
+    i = 0,
+    game;
 
 function renderView(){
 	maskedWordView.textContent = game.maskedValue();
@@ -67,7 +68,7 @@ function createGame(){
     var index = Math.floor(Math.random()*words.length);
     return hangman(words.splice(index, 1)[0]);
 }
-var game = createGame();
+game = createGame();
 
 renderView();
 
@@ -79,8 +80,8 @@ var onKeyClick = function (e){
         i++;
     }
     if(game.isGameOver()){
-        popupText.textContent = game.isWinner()?'Jeeeei... vel gert!!!': 'Úbs... dauður :(';
-            message.textContent = game.isWinner()?'': 'Orðið er: ' + game.word();
+        popupText.textContent = game.isWinner()?'Jeeeei... vel gert!!!': 'Úbs... :(';
+        message.textContent = game.isWinner()?'': 'Orðið er: ' + game.word();
         popup.className += ' glass-show';
     }
     renderView();
@@ -96,13 +97,13 @@ aftur.addEventListener('click', function(){
     for(var j=0;j<childNodes.length;j++){
         childNodes[j].setAttribute('class', 'stroke');
     }
-    for(var j=0;j<keys.length;j++) {
+    for(j=0;j<keys.length;j++) {
         keys[j].className = '';
     }
     if(words.length) {
         game = createGame();
         renderView();
     } else {
-        alert('Ekki með fleiri orð í bili.');
+        window.alert('Ekki með fleiri orð í bili.');
     }
-})
+});

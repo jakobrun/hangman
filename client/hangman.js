@@ -6,12 +6,14 @@
     var createMaskedValue = function(length) {
         var str = '';
         for(var i = 0; i < length; i++) {
-            str += '_'
+            str += '_';
         }
         return str;
     },
         setCharAt = function(str, index, chr) {
-            if(index > str.length - 1) return str;
+            if(index > str.length - 1) {
+                return str;
+            }
             return str.substr(0, index) + chr + str.substr(index + 1);
         };
     var hangman = function(word) {
@@ -31,7 +33,7 @@
                 for(var i = 0; i < word.length; i++) {
                     if(word.charAt(i) === letter) {
                         res = true;
-                        maskedValue = setCharAt(maskedValue, i, letter)
+                        maskedValue = setCharAt(maskedValue, i, letter);
                     }
                 }
                 if(!res) {
